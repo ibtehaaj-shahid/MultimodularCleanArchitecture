@@ -21,4 +21,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "OLX Architecture Demo v2"
 include(":app")
- 
+include(":core:network")
+include(":core:uifoundations")
+include(":core:utils")
+include(":data:search")
+include(":domain:search")
+include(":feature:search")
+include(":core:di")
