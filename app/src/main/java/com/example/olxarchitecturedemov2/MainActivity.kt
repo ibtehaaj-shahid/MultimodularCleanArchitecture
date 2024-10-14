@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(modifier: Modifier) {
-    SearchBox("")
+    SearchBox()
 }
 
 @Preview(showBackground = true)
