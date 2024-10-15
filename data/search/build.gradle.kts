@@ -23,6 +23,16 @@ android {
             )
         }
     }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("pakistan") {
+            dimension = "version"
+        }
+        create("egypt") {
+            dimension = "version"
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -34,6 +44,7 @@ android {
 
 dependencies {
     implementation(project(":domain:search"))
+    api(project(":core:utils"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

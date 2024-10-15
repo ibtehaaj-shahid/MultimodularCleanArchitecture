@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.olxarchitecturedemov2"
+    namespace = "com.example.multimodularcleanarchitecture"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.olxarchitecturedemov2"
+        applicationId = "com.example.multimodularcleanarchitecture"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -28,6 +28,20 @@ android {
             )
         }
     }
+
+    flavorDimensions += "version"
+
+    productFlavors {
+        create("pakistan") {
+            dimension = "version"
+            applicationIdSuffix = ".pakistan"
+        }
+        create("egypt") {
+            dimension = "version"
+            applicationIdSuffix = ".egypt"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

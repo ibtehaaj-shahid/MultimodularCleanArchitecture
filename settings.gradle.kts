@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "OLX Architecture Demo v2"
+rootProject.name = "MultimodularCleanArchitecture"
 include(":app")
 include(":core:network")
 include(":core:uifoundations")

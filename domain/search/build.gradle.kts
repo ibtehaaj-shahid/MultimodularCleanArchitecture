@@ -9,10 +9,10 @@ android {
 
     defaultConfig {
         minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
+
 
     buildTypes {
         release {
@@ -23,12 +23,32 @@ android {
             )
         }
     }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("pakistan") {
+            dimension = "version"
+        }
+        create("egypt") {
+            dimension = "version"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    sourceSets {
+        getByName("egypt") {
+            java.srcDir("src/egypt/java")
+        }
+        getByName("pakistan") {
+            java.srcDir("src/pakistan/java")
+        }
     }
 }
 
@@ -40,3 +60,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+

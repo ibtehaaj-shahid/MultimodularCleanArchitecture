@@ -13,7 +13,15 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
-
+    flavorDimensions += "version"
+    productFlavors {
+        create("pakistan") {
+            dimension = "version"
+        }
+        create("egypt") {
+            dimension = "version"
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -33,7 +41,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

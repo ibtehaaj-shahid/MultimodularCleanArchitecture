@@ -10,9 +10,18 @@ android {
 
     defaultConfig {
         minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("pakistan") {
+            dimension = "version"
+        }
+        create("egypt") {
+            dimension = "version"
+        }
     }
 
     buildTypes {
@@ -38,6 +47,7 @@ android {
 
 dependencies {
     api(project(":domain:search"))
+    api(project(":core:uifoundations"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

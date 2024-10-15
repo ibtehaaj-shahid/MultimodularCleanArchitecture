@@ -1,4 +1,4 @@
-package com.example.olxarchitecturedemov2
+package com.example.multimodularcleanarchitecture
 
 import org.junit.Test
 

@@ -13,6 +13,16 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
+    flavorDimensions += "version"
+    productFlavors {
+        create("pakistan") {
+            dimension = "version"
+        }
+        create("egypt") {
+            dimension = "version"
+        }
+    }
+
 
     buildTypes {
         release {

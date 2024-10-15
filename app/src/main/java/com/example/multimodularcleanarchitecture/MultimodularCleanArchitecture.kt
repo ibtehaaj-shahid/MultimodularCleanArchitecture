@@ -1,16 +1,16 @@
-package com.example.olxarchitecturedemov2
+package com.example.multimodularcleanarchitecture
 
 import android.app.Application
 import com.example.di.usecase.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 
-class OLXArchitectureApp: Application() {
+class MultimodularCleanArchitecture: Application() {
 
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            androidContext(this@OLXArchitectureApp)
+            androidContext(this@MultimodularCleanArchitecture)
             modules(appModule)
         }
     }
